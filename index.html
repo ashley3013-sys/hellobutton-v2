@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Button</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #D8CFFF, #AABBFF);
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #AABBFF;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: #8899FF;
+        transform: scale(1.1); /* Grows slightly */
+      }
+    </style>
+    <script>
+      const btn = document.querySelector('button');
+      
+      btn.addEventListener('click', () => {
+  btn.style.transform = 'scale(0.9)';
+  setTimeout(() => {
+    btn.style.transform = 'scale(1)';
+  }, 100);
+  alert('hello world!');
+});
+
+    </script>
+  </head>
+  <body>
+    <h1>My First Button</h1>
+    <br>
+    <button onclick='alert("hello world!")'>click here</button>
+    <br>
+    <p>click the button to see what happens</p>
+  </body>
+</html>
