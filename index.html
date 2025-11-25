@@ -34,6 +34,16 @@
         }, 100);
         alert('hello world!');
       });
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+          btn.click();
+        }
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        document.body.style.background = `radial-gradient(circle at ${e.clientX/10}% ${e.clientY/10}%, #D8CFFF, #AABBFF)`;
+      });
     </script>
   </head>
   <body>
